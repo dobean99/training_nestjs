@@ -65,6 +65,22 @@ $ nest g module users
 $ nest g controller users
 $ nest g service users
 
+Request
+  ↓
+Middleware
+  ↓
+Guards (Allow or Block)
+  ↓
+Pipes (Validate / Transform)
+  ↓
+Controller → Service → Database
+  ↓
+Interceptors (Modify Response)
+  ↓
+Exception Filters (If error happens)
+  ↓
+Response
+
 ```
 
 ## Deployment
